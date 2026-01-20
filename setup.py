@@ -43,9 +43,9 @@ else:
                   'thefuck = thefuck.entrypoints.main:main',
                   'fuck = thefuck.entrypoints.not_configured:main']}
 
-setup(name='thefuck',
+setup(name='thefuck-3.14',
       version=VERSION,
-      description="Magnificent app which corrects your previous console command",
+      description="Magnificent app which corrects your previous console command (Python 3.14 compatible fork)",
       long_description=long_description,
       author='Witnz',
       author_email='your-email@example.com',
