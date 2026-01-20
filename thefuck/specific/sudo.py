@@ -1,4 +1,3 @@
-import six
 from decorator import decorator
 
 
