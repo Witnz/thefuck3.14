@@ -291,17 +291,17 @@ cache.disabled = False
 
 def get_installation_version():
     try:
-        from importlib.metadata import version
+        from importlib.metadata import version, PackageNotFoundError
         # Try the new package name first, fall back to old name
         try:
             return version('thefuck-3.14')
-        except Exception:
+        except PackageNotFoundError:
             return version('thefuck')
     except ImportError:
         import pkg_resources
         try:
             return pkg_resources.require('thefuck-3.14')[0].version
-        except Exception:
+        except pkg_resources.DistributionNotFound:
             return pkg_resources.require('thefuck')[0].version
 
 
